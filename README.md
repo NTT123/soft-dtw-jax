@@ -47,7 +47,7 @@ def kernel_dist(kernel, xs, ys):
 
 
 @partial(jax.jit, static_argnums=(2, 3, 4))
-def sdtw(a, b, warp_penalty=1.0, temperature=0.01, INFINITY=1e10):
+def sdtw(a, b, warp_penalty=1.0, temperature=0.01, INFINITY=1e8):
     N, D1 = a.shape
     M, D2 = b.shape
     assert D1 == D2
