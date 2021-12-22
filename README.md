@@ -6,7 +6,7 @@ Usage:
 ```python
 x = jax.random.normal(jax.random.PRNGKey(42), (4, 800, 80))
 y = jnp.roll(x, 4, axis=1)
-batched_jax_dtw(x, y, warp_penalty=1.0, temperature=0.01)
+batched_sdtw(x, y, warp_penalty=1.0, temperature=0.01)
 # DeviceArray([16.947954, 16.809141, 16.411541, 17.066374], dtype=float32)
 ```
 
